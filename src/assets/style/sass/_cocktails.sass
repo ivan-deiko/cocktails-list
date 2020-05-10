@@ -14,8 +14,9 @@
   
   .cocktails-container
     display: grid
+    max-width: 1090px
     grid-template-rows: 1fr
-    grid-template-columns: 150px 150px 150px 150px 150px
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
     grid-column-gap: 85px
     grid-row-gap: 50px
 
@@ -36,76 +37,8 @@
         color: $black-color 
     
 // media queries for cocktails
-
-@media screen and (max-width: 1300px)
-  .cocktails
-    .cocktails-container
-      grid-template-columns: repeat(4, 160px)
-
-@media screen and (max-width: 1200px)
-  .cocktails
-    .cocktails-container
-      grid-template-columns: repeat(3, 200px)
-
-@media screen and (max-width: 1100px)
-  .cocktails
-    .cocktails-container
-      grid-template-columns: repeat(3, 160px)
-  
-
 @media screen and (max-width: 1000px)
   .cocktails
     margin-left: 0
     padding-right: 30px
     padding-left: 30px
-    .cocktails-container
-      grid-template-columns: repeat(3, 220px)
-
-@media screen and (max-width: 900px)
-  .cocktails
-    .cocktails-container
-      grid-template-columns: repeat(2, 330px)
-
-@media screen and (max-width: 820px)
-  .cocktails
-    .cocktails-container
-      grid-column-gap: 50px
-
-@media screen and (max-width: 770px)
-  .cocktails
-    padding-left: 15px
-    padding-right: 15px
-    .cocktails-container
-      grid-template-columns: repeat(2, 300px)
-
-@media screen and (max-width: 700px)
-  .cocktails
-    .cocktails-container
-      grid-template-columns: repeat(2, 270px)
-  
-@media screen and (max-width: 640px)
-  .cocktails
-    .cocktails-container
-      grid-template-columns: repeat(2, 240px)
-
-@media screen and (max-width: 580px)
-  .cocktails
-    .cocktails-container
-      grid-template-columns: repeat(1, 450px)
-
-@media screen and (max-width: 500px)
-  .cocktails
-    .cocktails-container
-      grid-template-columns: repeat(1, 400px)
-
-@media screen and (max-width: 440px)
-  .cocktails
-    padding-right: 10px
-    padding-left: 10px
-    .cocktails-container
-      grid-template-columns: repeat(1, 295px)
-
-@media screen and (max-width: 350px)
-  .cocktails
-    padding-right: 5px
-    padding-left: 5px
