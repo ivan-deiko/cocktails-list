@@ -49,12 +49,11 @@
         const scrollY = window.scrollY
         const windowHeight = document.documentElement.clientHeight
         const pageHeight = document.documentElement.scrollHeight
-        
         const bottomOfPage = pageHeight - (windowHeight + scrollY);
         
-        if (bottomOfPage < 1 && !this.loadCount) {
-        // variable loadCount needed for control scroll, because when we scroll to bottom, 
-        // function pagination can be call two times with bottomOfPage < 1 === true
+        if (bottomOfPage < 1 && !this.loadCount && scrollY) {
+          // variable loadCount needed for control scroll, because when we scroll to bottom, 
+          // function pagination can be call two times with bottomOfPage < 1 === true
           this.loadCount++;        
           this.$store.dispatch(FETCH_COCKTAILS)
         } else {
