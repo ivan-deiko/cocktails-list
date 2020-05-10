@@ -1,0 +1,33 @@
+.hamburger
+  display: none
+  position: fixed
+  margin-top: 70px
+  left: 10px
+  top: 10px
+  z-index: 12
+  cursor: pointer
+  
+  span
+    display: block
+    width: 20px
+    height: 3px
+    margin-bottom: 4px
+    border-radius: 1px
+    background-color: $black-color
+
+  span:not(:first-child)
+    transition: 0.5s
+
+@media screen and (max-width: 1000px)
+  .hamburger 
+    display: block
+  .hamburger-open
+    span:nth-child(1) 
+      visibility: hidden
+    span:nth-child(3)
+      background-color: red
+      transform: rotate(-45deg)
+    span:nth-child(2)
+      background-color: red
+      transform: rotate(45deg) translate(5px, 4.5px)
+  
